@@ -25,6 +25,7 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 @RequiredArgsConstructor
 class EventStreamConfig {
+
     @Value("${spring.application.name}")
     private String applicationName;
 
@@ -32,7 +33,7 @@ class EventStreamConfig {
     Environment env(RabbitProperties rabbitProperties) {
         return new StreamEnvironmentBuilder()
                 .host(rabbitProperties.getHost())
-                .port(rabbitProperties.getStream().getPort())
+                .port(rabbitProperties.getPort())
                 .username(rabbitProperties.getUsername())
                 .password(rabbitProperties.getPassword())
                 .virtualHost(rabbitProperties.getVirtualHost())

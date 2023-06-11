@@ -41,7 +41,7 @@
             <artifactId>spring-rabbit-stream</artifactId>
         </dependency>
 
-        <dependency>
+        <dependency><!--cria conexões e executa healthcheck-->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
